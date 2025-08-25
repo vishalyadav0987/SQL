@@ -6,3 +6,5 @@
 4. mycli -u root -p mysql -- these is for autocompletion of queries
 5. \q Exit from mysql Cell
 6. mysql.server stop - for stopping server jo ki bg me ru ho rha hai
+7. For creating the database - CREATE DATABASE database_name;
+8. for using these database - USE database_name;

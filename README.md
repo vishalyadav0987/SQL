@@ -33,3 +33,26 @@ mysql.server stop
 - **Note:** For stopping server jo ki bg me ru ho rha hai.
 
 ---
+
+## command
+
+### 1. Database Creation:
+```bash
+CREATE DATABASE <database_name>;
+```
+- **✅ Output in cell:** 
+```
+Query OK, 1 row affected
+```
+---
+
+### 2. Using the Database:
+```bash
+USE <database_name>;
+```
+- **✅ Output in cell:** 
+```
+You are now connected to database "newDB" as user "root"
+```
+---
+
