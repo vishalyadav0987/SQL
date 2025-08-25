@@ -1,0 +1,8 @@
+# Hinglish notes
+
+1. I am using here mysql server not any software.
+2. How we connect with mysql server.
+3. mysql.server start -- For connect and start the mysql server
+4. mycli -u root -p mysql -- these is for autocompletion of queries
+5. \q Exit from mysql Cell
+6. mysql.server stop - for stopping server jo ki bg me ru ho rha hai
