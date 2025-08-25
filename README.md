@@ -119,3 +119,37 @@ SELECT * FROM <table_name>;
 
 
 
+### 5. Update Values in Table (Main):
+```bash
+UPDATE <table_name> SET name='XYZ' , grades='O' WHERE id=1;
+```
+- **✅ Output in cell:** 
+```
+Query OK, 1 row affected
+```
+- **✅ After - Output in cell:** 
+```bash
+SELECT * FROM <table_name>;
+```
+```
++----+---------------+--------+---------------+
+| id | name          | grades | city          |
++----+---------------+--------+---------------+
+| 1  | XYZ (changes) | O      | New York      |
+| 2  | Bob Smith     | B      | Los Angeles   |
+| 3  | Charlie Brown | A      | Chicago       |
+| 4  | Diana Prince  | C      | Houston       |
+| 5  | Ethan Hunt    | B      | Miami         |
+| 6  | Fiona Davis   | A      | Boston        |
+| 7  | George Miller | C      | San Francisco |
+| 8  | Hannah Lee    | B      | Seattle       |
+| 9  | Ian Clark     | A      | Denver        |
+| 10 | Julia Adams   | B      | Dallas        |
++----+---------------+--------+---------------+
+```
+---
+
+
+
+
+
