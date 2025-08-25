@@ -186,6 +186,88 @@ SELECT * FROM <table_name>;
 ---
 
 
+### 6. ALTER Table (Main):
+- **These command is used for add, delete and modify columns in an existing table.**
+- **1. ALTER TABLE - Add column syntax**
+```bash
+ALTER TABLE <table_name> ADD COLUMN <column_name_with_type_like_int>;
+```
+- **✅ Output in cell:** 
+```
+You're about to run a destructive command.
+Do you want to proceed? (y/n): Y
+Your call!
+Query OK, 1 row affected
+```
+- **✅ After ALTER - Output in cell:** 
+```bash
+SELECT * FROM <table_name>;
+```
+```
++----+---------------+--------+---------------+------------+
+| id | name          | grades | city          | nativeLang |
++----+---------------+--------+---------------+------------+
+| 1  | XYZ           | O      | New York      | <null>     |
+| 2  | Bob Smith     | B      | Los Angeles   | <null>     |
+| 3  | Charlie Brown | A      | Chicago       | <null>     |
+| 4  | Diana Prince  | C      | Houston       | <null>     |
+| 5  | Ethan Hunt    | B      | Miami         | <null>     |
+| 7  | George Miller | C      | San Francisco | <null>     |
+| 8  | Hannah Lee    | B      | Seattle       | <null>     |
+| 9  | Ian Clark     | A      | Denver        | <null>     |
+| 10 | Julia Adams   | B      | Dallas        | <null>     |
++----+---------------+--------+---------------+------------+
+```
+---
+
+- **2. ALTER TABLE - Drop column syntax**
+```bash
+ALTER TABLE <table_name> DROP COLUMN <column_name>;
+```
+- **✅ Output in cell:** 
+```
+You're about to run a destructive command.
+Do you want to proceed? (y/n): Y
+Your call!
+Query OK, 1 row affected
+```
+- **✅ After DROP - Output in cell:** 
+```bash
+SELECT * FROM <table_name>;
+```
+```
++----+---------------+--------+------------+
+| id | name          | grades | nativeLang |
++----+---------------+--------+------------+
+| 1  | XYZ           | O      | <null>     |
+| 2  | Bob Smith     | B      | <null>     |
+| 3  | Charlie Brown | A      | <null>     |
+| 4  | Diana Prince  | C      | <null>     |
+| 5  | Ethan Hunt    | B      | <null>     |
+| 7  | George Miller | C      | <null>     |
+| 8  | Hannah Lee    | B      | <null>     |
+| 9  | Ian Clark     | A      | <null>     |
+| 10 | Julia Adams   | B      | <null>     |
++----+---------------+--------+------------+
+```
+---
+
+- **3. ALTER TABLE - Modify/Alter column syntax**
+```bash
+ALTER TABLE <table_name> MODIFY <column_name_with_type_like_int>;
+ALTER TABLE students MODIFY grades VARCHAR(20);
+```
+- **✅ Output in cell:** 
+```
+You're about to run a destructive command.
+Do you want to proceed? (y/n): Y
+Your call!
+Query OK, 1 row affected
+```
+
+---
+
+
 
 
 

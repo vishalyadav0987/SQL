@@ -21,3 +21,10 @@ VALUES
 14. For showing table after inserting data - SELECT * FROM table_name;
 15. Delete single row in table using condition - DELETE FROM <table_name> WHERE <condition_(id=1)>;
 16. For showing table after inserting data - SELECT * FROM table_name;
+17. ALTER Table - ADD, DELETE , MODIFY  columns in existing table.
+18. ADD - ALTER TABLE table_name ADD COLUMN <col_value_with_dataype_like_varchar(10)>;
+19. For showing table after inserting data - SELECT * FROM table_name;
+20 DELETE - ALTER TABLE table_name DROP COLUMN <col_name>;
+21. For showing table after inserting data - SELECT * FROM table_name;
+22. ALTER TABLE students MODIFY grades VARCHAR(20);
+23. For showing table after inserting data - SELECT * FROM table_name;
