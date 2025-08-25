@@ -19,3 +19,5 @@ VALUES
 12. For showing table after inserting data - SELECT * FROM table_name;
 13. Update Values in table - UPDATE table_name SET name='XYZ' , grades='O' WHERE id=1;
 14. For showing table after inserting data - SELECT * FROM table_name;
+15. Delete single row in table using condition - DELETE FROM <table_name> WHERE <condition_(id=1)>;
+16. For showing table after inserting data - SELECT * FROM table_name;

@@ -153,3 +153,39 @@ SELECT * FROM <table_name>;
 
 
 
+### 6. Delete Values in Table (Main):
+```bash
+DELETE FROM <table_name> WHERE <condition_(id=1)>;
+```
+- **✅ Output in cell:** 
+```
+You're about to run a destructive command.
+Do you want to proceed? (y/n): Y
+Your call!
+Query OK, 1 row affected
+```
+- **✅ After - Output in cell:** 
+```bash
+SELECT * FROM <table_name>;
+```
+```
++----+---------------+--------+---------------+
+| id | name          | grades | city          |
++----+---------------+--------+---------------+
+| 1  | XYZ           | O      | New York      |
+| 2  | Bob Smith     | B      | Los Angeles   |
+| 3  | Charlie Brown | A      | Chicago       |
+| 4  | Diana Prince  | C      | Houston       |
+| 5  | Ethan Hunt    | B      | Miami         |
+| 7  | George Miller | C      | San Francisco |
+| 8  | Hannah Lee    | B      | Seattle       |
+| 9  | Ian Clark     | A      | Denver        |
+| 10 | Julia Adams   | B      | Dallas        |
++----+---------------+--------+---------------+
+```
+---
+
+
+
+
+
