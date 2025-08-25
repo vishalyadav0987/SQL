@@ -10,3 +10,10 @@
 8. for using these database - USE database_name;
 9. For creating the table - CREATE TABLE table_name  (id BIGINT PRIMARY KEY, name varchar(50), grades char(20) ,city varchar(30) );
 10. Viewing the Table and Accessing All Records - SELECT * FROM table_name;
+11 Inserting data into the table - INSERT INTO <table_name> (id, name, grades, city) 
+VALUES 
+    (value1_id, 'value1_name', 'value1_grade', 'value1_city'),
+    (value2_id, 'value2_name', 'value2_grade', 'value2_city'),
+    (value3_id, 'value3_name', 'value3_grade', 'value3_city'),
+    ...;
+12. For showing table after inserting data - SELECT * FROM table_name;

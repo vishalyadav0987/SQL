@@ -81,5 +81,41 @@ SELECT * FROM <table_name>;
 ---
 
 
+### 4. Inserting Data into the Table (Main):
+```bash
+INSERT INTO <table_name> (id, name, grades, city) 
+VALUES 
+    (value1_id, 'value1_name', 'value1_grade', 'value1_city'),
+    (value2_id, 'value2_name', 'value2_grade', 'value2_city'),
+    (value3_id, 'value3_name', 'value3_grade', 'value3_city'),
+    ...;
+```
+- **✅ Output in cell:** 
+```
+Query OK, 10 rows affected
+```
+- **✅ After - Output in cell:** 
+```bash
+SELECT * FROM <table_name>;
+```
+```
++----+---------------+--------+---------------+
+| id | name          | grades | city          |
++----+---------------+--------+---------------+
+| 1  | Alice Johnson | A      | New York      |
+| 2  | Bob Smith     | B      | Los Angeles   |
+| 3  | Charlie Brown | A      | Chicago       |
+| 4  | Diana Prince  | C      | Houston       |
+| 5  | Ethan Hunt    | B      | Miami         |
+| 6  | Fiona Davis   | A      | Boston        |
+| 7  | George Miller | C      | San Francisco |
+| 8  | Hannah Lee    | B      | Seattle       |
+| 9  | Ian Clark     | A      | Denver        |
+| 10 | Julia Adams   | B      | Dallas        |
++----+---------------+--------+---------------+
+```
+---
+
+
 
 
