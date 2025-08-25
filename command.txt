@@ -8,3 +8,5 @@
 6. mysql.server stop - for stopping server jo ki bg me ru ho rha hai
 7. For creating the database - CREATE DATABASE database_name;
 8. for using these database - USE database_name;
+9. For creating the table - CREATE TABLE table_name  (id BIGINT PRIMARY KEY, name varchar(50), grades char(20) ,city varchar(30) );
+10. Viewing the Table and Accessing All Records - SELECT * FROM table_name;

@@ -56,3 +56,30 @@ You are now connected to database "newDB" as user "root"
 ```
 ---
 
+### 3. Creating a Table (Main):
+```bash
+CREATE TABLE <table_name> (id BIGINT PRIMARY KEY, name varchar(50), grades char(20), city varchar(30) );
+```
+- **✅ Output in cell:** 
+```
+Query OK, 0 rows affected
+```
+---
+
+
+### 4. Viewing the Table and Accessing All Records (Main):
+```bash
+SELECT * FROM <table_name>;
+```
+- **✅ Output in cell:** 
+```
++----+------+--------+------+
+| id | name | grades | city |
++----+------+--------+------+
++----+------+--------+------+
+```
+---
+
+
+
+
