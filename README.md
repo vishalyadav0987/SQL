@@ -268,33 +268,14 @@ Query OK, 1 row affected
 ---
 
 
-### 7. DROP Table (Main): pen
-- **This command permanently removes a table and all of its data from the database.**
-```bash
-DROP TABLE <table_name>;
-```
-- **✅ Output in cell:** 
-```
-You're about to run a destructive command.
-Do you want to proceed? (y/n): y
-Your call!
-Query OK, 0 rows affected
-```
-- **✅ After - Output in cell:** 
-```bash
-SELECT * FROM <table_name>;
-```
-```
-(1146, "Table 'newdb.cars' doesn't exist")
-```
----
 
 
 
 
 
 
-### 8. TRUNCATE Table (Main): 
+
+### 7. TRUNCATE Table (Main): 
 - **The TRUNCATE command in SQL is a Data Definition Language (DDL) statement used to remove all rows from a table instantly, while keeping the table structure, columns, and schema intact.**
 ```bash
 TRUNCATE TABLE <table_name>;
@@ -323,4 +304,23 @@ SELECT * FROM <table_name>;
 
 
 
-
+### 8. DROP Table (Main):
+- **This command permanently removes a table and all of its data from the database.**
+```bash
+DROP TABLE <table_name>;
+```
+- **✅ Output in cell:** 
+```
+You're about to run a destructive command.
+Do you want to proceed? (y/n): y
+Your call!
+Query OK, 0 rows affected
+```
+- **✅ After - Output in cell:** 
+```bash
+SELECT * FROM <table_name>;
+```
+```
+(1146, "Table 'newdb.cars' doesn't exist")
+```
+---
