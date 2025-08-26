@@ -329,7 +329,7 @@ SELECT * FROM <table_name>;
 
 
 ### 9. SELECT statement (Main):
-- **1.The SELECT statement is used to select data from the table.**
+- **1. The SELECT statement is used to select data from the table.**
 ```bash
 SELECT <col_names,col2_name,...> FROM <table_name>;
 SELECT grades,name FROM students;
@@ -352,7 +352,7 @@ SELECT grades,name FROM students;
 ```
 
 
-- **2.The SELECT statement is used to retrieve all the fields (columns) and their data (rows) from a table. In other words, it allows you to access and fetch data stored in the table.**
+- **2. The SELECT statement is used to retrieve all the fields (columns) and their data (rows) from a table. In other words, it allows you to access and fetch data stored in the table.**
 ```bash
 SELECT * FROM <table_name>;
 ```
