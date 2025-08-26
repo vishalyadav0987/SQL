@@ -32,3 +32,6 @@ VALUES
 25. For showing table after inserting data - SELECT * FROM table_name;
 26. For deleting table from database with structure and with data - DROP TABLE table_name;
 27. For showing table after inserting data - SELECT * FROM table_name;
+28. Select particular mutiple cols from table - SELECT <col_names,col2_name,...> FROM <table_name>;
+29. Fetching all the data from table with table stucture - SELECT * FROM table_name;
+30. Fetching distinct and unique col value from table - SELECT DISTINCT <col_names,col2_name,...> FROM <table_name>;

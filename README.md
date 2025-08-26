@@ -324,3 +324,73 @@ SELECT * FROM <table_name>;
 (1146, "Table 'newdb.cars' doesn't exist")
 ```
 ---
+
+
+
+
+### 9. SELECT statement (Main):
+- **1.The SELECT statement is used to select data from the table.**
+```bash
+SELECT <col_names,col2_name,...> FROM <table_name>;
+SELECT grades,name FROM students;
+```
+- **✅ Output in cell:** 
+```
++--------+---------------+
+| grades | name          |
++--------+---------------+
+| O      | XYZ           |
+| B      | Bob Smith     |
+| A      | Charlie Brown |
+| C      | Diana Prince  |
+| B      | Ethan Hunt    |
+| C      | George Miller |
+| B      | Hannah Lee    |
+| A      | Ian Clark     |
+| B      | Julia Adams   |
++--------+---------------+
+```
+
+
+- **2.The SELECT statement is used to retrieve all the fields (columns) and their data (rows) from a table. In other words, it allows you to access and fetch data stored in the table.**
+```bash
+SELECT * FROM <table_name>;
+```
+- **✅ Output in cell:** 
+```
++----+---------------+--------+------------+
+| id | name          | grades | nativeLang |
++----+---------------+--------+------------+
+| 1  | XYZ           | O      | <null>     |
+| 2  | Bob Smith     | B      | <null>     |
+| 3  | Charlie Brown | A      | <null>     |
+| 4  | Diana Prince  | C      | <null>     |
+| 5  | Ethan Hunt    | B      | <null>     |
+| 7  | George Miller | C      | <null>     |
+| 8  | Hannah Lee    | B      | <null>     |
+| 9  | Ian Clark     | A      | <null>     |
+| 10 | Julia Adams   | B      | <null>     |
++----+---------------+--------+------------+
+
+```
+
+
+
+- **3. To SELECT distinct/unique fields available in the table.**
+```bash
+SELECT DISTINCT <col_names,col2_name,...> FROM <table_name>;
+```
+- **✅ Output in cell:** 
+```
++--------+
+| grades |
++--------+
+| O      |
+| B      |
+| A      |
+| C      |
++--------+
+
+```
+
+---
