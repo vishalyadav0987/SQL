@@ -28,3 +28,7 @@ VALUES
 21. For showing table after inserting data - SELECT * FROM table_name;
 22. ALTER TABLE students MODIFY grades VARCHAR(20);
 23. For showing table after inserting data - SELECT * FROM table_name;
+24. For deleting all the data of table like clear the without deleting table structure or table - TRUNCATE TABLE table_name;
+25. For showing table after inserting data - SELECT * FROM table_name;
+26. For deleting table from database with structure and with data - DROP TABLE table_name;
+27. For showing table after inserting data - SELECT * FROM table_name;
