@@ -394,3 +394,35 @@ SELECT DISTINCT <col_names,col2_name,...> FROM <table_name>;
 ```
 
 ---
+
+
+
+### 10. WHERE Clause (Main):
+- **The WHERE Clause is used to filter records. It is used to extract only those records that fulfill a specified conditions.**
+```bash
+SELECT * FROM table_name WHERE condtion;
+```
+- **✅ Output in cell:** 
+```
++----+---------------+--------+------------+
+| id | name          | grades | nativeLang |
++----+---------------+--------+------------+
+| 3  | Charlie Brown | A      | <null>     |
+| 9  | Ian Clark     | A      | <null>     |
++----+---------------+--------+------------+
+```
+```bash
+SELECT <col_names,col2_name,...> FROM table_name WHERE condtion;
+```
+- **✅ Output in cell:** 
+```
++----+---------------+
+| id | name          |
++----+---------------+
+| 3  | Charlie Brown |
+| 9  | Ian Clark     |
++----+---------------+
+```
+
+
+---

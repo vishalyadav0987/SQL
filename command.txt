@@ -35,3 +35,5 @@ VALUES
 28. Select particular mutiple cols from table - SELECT <col_names,col2_name,...> FROM <table_name>;
 29. Fetching all the data from table with table stucture - SELECT * FROM table_name;
 30. Fetching distinct and unique col value from table - SELECT DISTINCT <col_names,col2_name,...> FROM <table_name>;
+31. Select all data using condition -  SELECT * FROM students WHERE grades='A';
+32. Select the particular columns based on condition -  SELECT id,name FROM students WHERE grades='A';
