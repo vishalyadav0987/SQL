@@ -454,6 +454,7 @@ UPDATE students SET nativeLang='English' WHERE grades='C' || grades='O';
 | 10 | Julia Adams   | B      | Hindi      |
 +----+---------------+--------+------------+
 ```
+---
 
 ```bash
 SELECT name FROM students WHERE id>4 && nativeLang='Hindi';
@@ -469,7 +470,7 @@ SELECT name FROM students WHERE id>4 && nativeLang='Hindi';
 | Julia Adams |
 +-------------+
 ```
-
+---
 
 ```bash
 SELECT * FROM students WHERE id>4 && nativeLang='Hindi';
@@ -485,3 +486,5 @@ SELECT * FROM students WHERE id>4 && nativeLang='Hindi';
 | 10 | Julia Adams | B      | Hindi      |
 +----+-------------+--------+------------+
 ```
+
+---
