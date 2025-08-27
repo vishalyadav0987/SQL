@@ -426,3 +426,62 @@ SELECT <col_names,col2_name,...> FROM table_name WHERE condtion;
 
 
 ---
+
+### Operator in SQL
+- **The SQL reserved words and characters are called operators, which are used with a WHERE cluase in a SQL query.**
+#### Most used Operater:
+- **Arithmetic operators:** +, -, *, /, % ``numerical value``
+- **Comparison operators:** =, !=, >, <, >=, <= ``Compare two different tables data``
+- **Logical operators:** ALL, IN, BETWEEN, LIKE, AND, OR, NOT, ANY ``Perform Boolen values``
+- **Bitwise operators:** AND(&) , OR(|) ``perform the bit operations``
+
+```bash
+UPDATE students SET nativeLang='English' WHERE grades='C' || grades='O';
+```
+- **✅ Output in cell:** 
+```
++----+---------------+--------+------------+
+| id | name          | grades | nativeLang |
++----+---------------+--------+------------+
+| 1  | XYZ           | O      | English    |
+| 2  | Bob Smith     | B      | Hindi      |
+| 3  | Charlie Brown | A      | Hindi      |
+| 4  | Diana Prince  | C      | English    |
+| 5  | Ethan Hunt    | B      | Hindi      |
+| 7  | George Miller | C      | English    |
+| 8  | Hannah Lee    | B      | Hindi      |
+| 9  | Ian Clark     | A      | Hindi      |
+| 10 | Julia Adams   | B      | Hindi      |
++----+---------------+--------+------------+
+```
+
+```bash
+SELECT name FROM students WHERE id>4 && nativeLang='Hindi';
+```
+- **✅ Output in cell:** 
+```
++-------------+
+| name        |
++-------------+
+| Ethan Hunt  |
+| Hannah Lee  |
+| Ian Clark   |
+| Julia Adams |
++-------------+
+```
+
+
+```bash
+SELECT * FROM students WHERE id>4 && nativeLang='Hindi';
+```
+- **✅ Output in cell:** 
+```
++----+-------------+--------+------------+
+| id | name        | grades | nativeLang |
++----+-------------+--------+------------+
+| 5  | Ethan Hunt  | B      | Hindi      |
+| 8  | Hannah Lee  | B      | Hindi      |
+| 9  | Ian Clark   | A      | Hindi      |
+| 10 | Julia Adams | B      | Hindi      |
++----+-------------+--------+------------+
+```
