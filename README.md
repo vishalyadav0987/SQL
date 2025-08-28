@@ -427,7 +427,7 @@ SELECT <col_names,col2_name,...> FROM table_name WHERE condtion;
 
 ---
 
-### Operator in SQL
+### 10.A Operator in SQL
 - **The SQL reserved words and characters are called operators, which are used with a WHERE cluase in a SQL query.**
 #### Most used Operater:
 - **Arithmetic operators:** +, -, *, /, % ``numerical value``
@@ -485,6 +485,68 @@ SELECT * FROM students WHERE id>4 && nativeLang='Hindi';
 | 9  | Ian Clark   | A      | Hindi      |
 | 10 | Julia Adams | B      | Hindi      |
 +----+-------------+--------+------------+
+```
+
+---
+
+### 10.B LIMIT Clause
+- **The LIMIT clause is used to set an upper limit on the number of tuples return by SQL.**
+```bash
+SELECT <col_names,col2_name,...,*> FROM <table_name> LIMIT <NUMBER>;
+```
+- **✅ Output in cell:** 
+```
+LIMIT 5
++----+---------------+--------+------------+
+| id | name          | grades | nativeLang |
++----+---------------+--------+------------+
+| 2  | Bob Smith     | B      | Hindi      |
+| 3  | Charlie Brown | A      | Hindi      |
+| 4  | Diana Prince  | C      | English    |
+| 5  | Ethan Hunt    | B      | Hindi      |
+| 7  | George Miller | C      | English    |
++----+---------------+--------+------------+
+```
+
+---
+
+### 10.C ORDER BY Clause
+- **The ORDER BY is used to sort the result-set in ascending (ASC) or descending order (DESC).**
+```bash
+SELECT <col_names,col2_name,...,*> FROM <table_name> ORDER BY <single_col_name> ASC/DESC;
+```
+- **✅ Output in cell:** 
+```
+DESC
++----+---------------+--------+------------+
+| id | name          | grades | nativeLang |
++----+---------------+--------+------------+
+| 1  | XYZ           | O      | English    |
+| 10 | Julia Adams   | B      | Hindi      |
+| 9  | Ian Clark     | A      | Hindi      |
+| 8  | Hannah Lee    | B      | Hindi      |
+| 7  | George Miller | C      | English    |
+| 5  | Ethan Hunt    | B      | Hindi      |
+| 4  | Diana Prince  | C      | English    |
+| 3  | Charlie Brown | A      | Hindi      |
+| 2  | Bob Smith     | B      | Hindi      |
++----+---------------+--------+------------+
+
+ASC
++----+---------------+--------+------------+
+| id | name          | grades | nativeLang |
++----+---------------+--------+------------+
+| 2  | Bob Smith     | B      | Hindi      |
+| 3  | Charlie Brown | A      | Hindi      |
+| 4  | Diana Prince  | C      | English    |
+| 5  | Ethan Hunt    | B      | Hindi      |
+| 7  | George Miller | C      | English    |
+| 8  | Hannah Lee    | B      | Hindi      |
+| 9  | Ian Clark     | A      | Hindi      |
+| 10 | Julia Adams   | B      | Hindi      |
+| 1  | XYZ           | O      | English    |
++----+---------------+--------+------------+
+
 ```
 
 ---
