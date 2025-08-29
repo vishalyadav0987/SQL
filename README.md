@@ -550,3 +550,185 @@ ASC
 ```
 
 ---
+
+### 11. Import CSV file in SQL (Main):
+- PENDING
+
+---
+
+### 12. String Functions (Main):
+- **Function in SQL are the database objects thst contain a set of SQL statements to perform a specific task. A function accepts input parameters, perform actions, and then return the result.**
+
+#### Tpyes of functions:
+- **System Defined function:** Example: ``rand(), round(), upper(), lower(), count(), sum(), max(), etc.``
+- **User Defined function:** Once you defined a fuction can call it in the same way as the built in funtions.
+
+- ``**Functions**``
+    * **UPPER():** converts the values of a field to uppercase.
+    * **LOWER():** converts the values of a field to lowercase.
+    * **LENGTH():** return the length of text field value.
+    * **SUBSTRING():**
+    * **NOW():** return the current system data and time.
+    * **FORMAT():** used ti set the format of a field.
+    * **CONCAT():**
+    * **REPLACE():** replaces all occurrences of a substring with in string, with new substring.
+    * **TRIM():** removing leading and tralling spaces.
+
+
+---
+
+- **✅ Outputs in cell:**
+```bash
+UPPER()
+SELECT UPPER(name),id,grades,nativeLang FROM students;
+```
+```
++---------------+----+--------+------------+
+| UPPER(name)   | id | grades | nativeLang |
++---------------+----+--------+------------+
+| XYZ           | 1  | O      | English    |
+| BOB SMITH     | 2  | B      | Hindi      |
+| CHARLIE BROWN | 3  | A      | Hindi      |
+| DIANA PRINCE  | 4  | C      | English    |
+| ETHAN HUNT    | 5  | B      | Hindi      |
+| GEORGE MILLER | 7  | C      | English    |
+| HANNAH LEE    | 8  | B      | Hindi      |
+| IAN CLARK     | 9  | A      | Hindi      |
+| JULIA ADAMS   | 10 | B      | Hindi      |
++---------------+----+--------+------------+
+```
+
+---
+
+```bash
+LOWER(field)
+SELECT LOWER(name),id,grades,nativeLang FROM students;
+```
+```
++---------------+----+--------+------------+
+| LOWER(name)   | id | grades | nativeLang |
++---------------+----+--------+------------+
+| xyz           | 1  | O      | English    |
+| bob smith     | 2  | B      | Hindi      |
+| charlie brown | 3  | A      | Hindi      |
+| diana prince  | 4  | C      | English    |
+| ethan hunt    | 5  | B      | Hindi      |
+| george miller | 7  | C      | English    |
+| hannah lee    | 8  | B      | Hindi      |
+| ian clark     | 9  | A      | Hindi      |
+| julia adams   | 10 | B      | Hindi      |
++---------------+----+--------+------------+
+```
+
+---
+
+```bash
+LENGTH(field)
+SELECT LENGTH(name) ,name,id,grades,nativeLang FROM students;
+```
+```
++--------------+---------------+----+--------+------------+
+| LENGTH(name) | name          | id | grades | nativeLang |
++--------------+---------------+----+--------+------------+
+| 3            | XYZ           | 1  | O      | English    |
+| 9            | Bob Smith     | 2  | B      | Hindi      |
+| 13           | Charlie Brown | 3  | A      | Hindi      |
+| 12           | Diana Prince  | 4  | C      | English    |
+| 10           | Ethan Hunt    | 5  | B      | Hindi      |
+| 13           | George Miller | 7  | C      | English    |
+| 10           | Hannah Lee    | 8  | B      | Hindi      |
+| 9            | Ian Clark     | 9  | A      | Hindi      |
+| 11           | Julia Adams   | 10 | B      | Hindi      |
++--------------+---------------+----+--------+------------+
+```
+
+---
+```bash
+SUBSTRING(field,startIndx,endIndx)
+SELECT SUBSTRING(name,1,3) ,name,id,grades,nativeLang FROM students;
+```
+```
++---------------------+---------------+----+--------+------------+
+| SUBSTRING(name,1,3) | name          | id | grades | nativeLang |
++---------------------+---------------+----+--------+------------+
+| XYZ                 | XYZ           | 1  | O      | English    |
+| Bob                 | Bob Smith     | 2  | B      | Hindi      |
+| Cha                 | Charlie Brown | 3  | A      | Hindi      |
+| Dia                 | Diana Prince  | 4  | C      | English    |
+| Eth                 | Ethan Hunt    | 5  | B      | Hindi      |
+| Geo                 | George Miller | 7  | C      | English    |
+| Han                 | Hannah Lee    | 8  | B      | Hindi      |
+| Ian                 | Ian Clark     | 9  | A      | Hindi      |
+| Jul                 | Julia Adams   | 10 | B      | Hindi      |
++---------------------+---------------+----+--------+------------+
+```
+
+---
+
+```bash
+CONCAT(field_2,"+",filed_2,field_3...)
+SELECT CONCAT(name,"+",grades) ,name,id,grades,nativeLang FROM students;
+```
+```
++-------------------------+---------------+----+--------+------------+
+| CONCAT(name,"+",grades) | name          | id | grades | nativeLang |
++-------------------------+---------------+----+--------+------------+
+| XYZ+O                   | XYZ           | 1  | O      | English    |
+| Bob Smith+B             | Bob Smith     | 2  | B      | Hindi      |
+| Charlie Brown+A         | Charlie Brown | 3  | A      | Hindi      |
+| Diana Prince+C          | Diana Prince  | 4  | C      | English    |
+| Ethan Hunt+B            | Ethan Hunt    | 5  | B      | Hindi      |
+| George Miller+C         | George Miller | 7  | C      | English    |
+| Hannah Lee+B            | Hannah Lee    | 8  | B      | Hindi      |
+| Ian Clark+A             | Ian Clark     | 9  | A      | Hindi      |
+| Julia Adams+B           | Julia Adams   | 10 | B      | Hindi      |
++-------------------------+---------------+----+--------+------------+
+```
+
+---
+
+```bash
+REPLACE(field,newChar,changableChar)
+SELECT REPLACE(name,'o','X') ,name,id,grades,nativeLang FROM students;
+```
+```
++-----------------------+---------------+----+--------+------------+
+| REPLACE(name,'o','X') | name          | id | grades | nativeLang |
++-----------------------+---------------+----+--------+------------+
+| XYZ                   | XYZ           | 1  | O      | English    |
+| BXb Smith             | Bob Smith     | 2  | B      | Hindi      |
+| Charlie BrXwn         | Charlie Brown | 3  | A      | Hindi      |
+| Diana Prince          | Diana Prince  | 4  | C      | English    |
+| Ethan Hunt            | Ethan Hunt    | 5  | B      | Hindi      |
+| GeXrge Miller         | George Miller | 7  | C      | English    |
+| Hannah Lee            | Hannah Lee    | 8  | B      | Hindi      |
+| Ian Clark             | Ian Clark     | 9  | A      | Hindi      |
+| Julia Adams           | Julia Adams   | 10 | B      | Hindi      |
++-----------------------+---------------+----+--------+------------+
+```
+
+---
+```bash
+SELECT FORMAT(NOW(),'MMMM dd, yyyy') AS ForamteDate;
+```
+```
++--------------------+
+| ForamteDate        |
++--------------------+
+| 20,250,829,080,005 |
++--------------------+
+```
+---
+```bash
+SELECT NOW() AS CurrentDateTime;
+
+```
+```
++---------------------+
+| CurrentDateTime     |
++---------------------+
+| 2025-08-29 08:00:42 |
++---------------------+
+```
+
+---
