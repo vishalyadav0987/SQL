@@ -741,3 +741,117 @@ SELECT NOW() AS CurrentDateTime;
 ```
 
 ---
+
+
+### 13. Aggregate Functions (Main):
+- **Aggregate function performs a ``calculation`` on multiple as values and return single value and Aggregate function are often used with ``GROUP BY`` & ``SELECT`` statement.**
+
+
+- ``**Functions**``
+    * **COUNT():** return number of values in a column.
+    * **SUM():** returns sum of all values.
+    * **AVG():** 
+    * **MAX():**
+    * **MIN():**
+    * **ROUND():** rounds a number to a specified number of decimal places.
+
+
+---
+- **✅ Outputs in cell:**
+```
+COUNT(col_name) 
+```
+```bash
+SELECT COUNT(grades) AS gradeCnt FROM students;
+```
+```
++----------+
+| gradeCnt |
++----------+
+| 9        |
++----------+
+```
+
+---
+
+
+```
+SUM(col_name) 
+```
+```bash
+SELECT SUM(marks) AS TotalMarks FROM students;
+```
+```
++------------+
+| TotalMarks |
++------------+
+| 599        |
++------------+
+```
+
+---
+
+
+```
+AVG(col_name) 
+```
+```bash
+SELECT AVG(marks) AS AvgOfMarks FROM students;
+```
+```
++------------+
+| AvgOfMarks |
++------------+
+| 66.5556    |
++------------+
+```
+
+---
+
+```
+ROUND(AVG(col_name)) 
+```
+```bash
+SELECT ROUND(AVG(marks),2) AS AvgOfMarksRound FROM students;
+```
+```
++-----------------+
+| AvgOfMarksRound |
++-----------------+
+| 66.56           |
++-----------------+
+```
+
+---
+
+```
+MAX(col_name) 
+```
+```bash
+SELECT MAX(marks) AS HighestMark FROM students;
+```
+```
++-------------+
+| HighestMark |
++-------------+
+| 90          |
++-------------+
+```
+
+---
+
+```
+MIN(col_name) 
+```
+```bash
+SELECT MIN(marks) AS HighestMark FROM students;
+```
+```
++-------------+
+| MimimumMark |
++-------------+
+| 33          |
++-------------+
+```
+
+---
