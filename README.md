@@ -578,8 +578,10 @@ ASC
 ---
 
 - **✅ Outputs in cell:**
-```bash
+```
 UPPER()
+```
+```bash
 SELECT UPPER(name),id,grades,nativeLang FROM students;
 ```
 ```
@@ -600,8 +602,10 @@ SELECT UPPER(name),id,grades,nativeLang FROM students;
 
 ---
 
-```bash
+```
 LOWER(field)
+```
+```bash
 SELECT LOWER(name),id,grades,nativeLang FROM students;
 ```
 ```
@@ -621,9 +625,10 @@ SELECT LOWER(name),id,grades,nativeLang FROM students;
 ```
 
 ---
-
-```bash
+```
 LENGTH(field)
+```
+```bash
 SELECT LENGTH(name) ,name,id,grades,nativeLang FROM students;
 ```
 ```
@@ -643,8 +648,10 @@ SELECT LENGTH(name) ,name,id,grades,nativeLang FROM students;
 ```
 
 ---
-```bash
+```
 SUBSTRING(field,startIndx,endIndx)
+```
+```bash
 SELECT SUBSTRING(name,1,3) ,name,id,grades,nativeLang FROM students;
 ```
 ```
@@ -664,9 +671,10 @@ SELECT SUBSTRING(name,1,3) ,name,id,grades,nativeLang FROM students;
 ```
 
 ---
-
-```bash
+```
 CONCAT(field_2,"+",filed_2,field_3...)
+```
+```bash
 SELECT CONCAT(name,"+",grades) ,name,id,grades,nativeLang FROM students;
 ```
 ```
@@ -686,9 +694,10 @@ SELECT CONCAT(name,"+",grades) ,name,id,grades,nativeLang FROM students;
 ```
 
 ---
-
-```bash
+```
 REPLACE(field,newChar,changableChar)
+```
+```bash
 SELECT REPLACE(name,'o','X') ,name,id,grades,nativeLang FROM students;
 ```
 ```
