@@ -1166,3 +1166,72 @@ SELECT DAYOFYEAR(addmission_date) AS admission_doy FROM students;
 ```
 
 ---
+
+
+### 16. SQL JOINS (Main):
+
+![JOINS](./assets/join.png)
+
+- **Types of Joins:**
+    * ``JOIN`` means to combine something.
+    * A ``JOIN`` clause is used to combine data from two or more tables. based on a related column between them.
+    * **Example:**
+
+    * ![JOINSExample](./assets/join-exam.png)
+
+    * ![JOINSExample](./assets/j1.png)
+
+    * ![JOINSExample](./assets/j2.png)
+
+    * **Note:** In the above image, there are two tables. **Table_1** stores customer details, while **Table_2** stores payment details. Both tables are linked through the ``customer_id`` field, which indicates the payment method (e.g., card, mobile, UPI, etc.) used by each customer.
+
+    * **JOINS are:**
+
+        * **1️⃣ INNER JOIN**
+            * ![inner](./assets/inner.png)
+            * Sirf wahi rows laata hai jo dono tables me match karti hain.
+            * Example: Agar customer aur payment table me ``customer_id`` match karega tabhi record aayega.
+            * Matlab = Common data only.
+            * **SYNTAX**
+            ```bash
+            SELECT * FROM table_1_main as t1 INNER JOIN table_2 as t2 ON t2.same_col = t1.same_col
+            ```
+            ```bash
+            SELECT * FROM USER AS U INNER JOIN `PAYMENT` AS P ON U.user_id = P.user_id;
+            ```
+            * **✅ Outputs in cell:**
+            ```
+            +---------+--------------+-------------+--------------------------+------------+---------+--------------+--------+------------+
+| user_id | name         | order_type  | user_email               | payment_id | user_id | payment_type | amount | pay_date   |
++---------+--------------+-------------+--------------------------+------------+---------+--------------+--------+------------+
+| 103     | Vishal Yadav | Electronics | vishal.yadav@example.com | 201        | 103     | Card         | 2500   | 2025-08-20 |
+| 512     | Ankit Sharma | Clothing    | ankit.sharma@example.com | 452        | 512     | UPI          | 1200   | 2025-08-21 |
+| 845     | Neha Singh   | Grocery     | neha.singh@example.com   | 789        | 845     | NetBanking   | 3400   | 2025-08-22 |
++---------+--------------+-------------+--------------------------+------------+---------+--------------+--------+------------+
+            ```
+
+        * **2️⃣ LEFT JOIN**
+            * ![LEFT](./assets/left.png)
+            * Left table ke saare records dikhata hai, aur agar right table me match nahi hai toh ``NULL`` aayega.
+            * Example: Customer ka record aayega chahe usne payment kiya ho ya nahi.
+            * Matlab = All from Left + matching from Right.
+
+        * **3️⃣ RIGHT JOIN**
+            * ![RIGHT](./assets/right.png)
+            * Right table ke saare records dikhata hai, aur agar left table me match nahi hai toh ``NULL`` aayega.
+            * Example: Payment ka record aayega chahe customer table me entry ho ya nahi.
+            * Matlab = All from Right + matching from Left.
+            
+
+        * **4️⃣ FULL OUTER JOIN**
+            * ![FULL](./assets/full.png)
+            * Dono tables ke saare records dikhata hai, chahe match ho ya na ho.
+            * Jo match nahi hote unke saamne NULL aa jata hai.
+            * Matlab = All from Left + All from Right.
+        
+        * **Explaination:**
+            * ``INNER JOIN`` → Common only
+            * ``LEFT JOIN`` → Left + Common
+            * ``RIGHT JOIN`` → Right + Common
+            * ``FULL OUTER JOIN`` → Left + Right + Common
+
