@@ -1219,6 +1219,31 @@ SELECT DAYOFYEAR(addmission_date) AS admission_doy FROM students;
             * Left table ke saare records dikhata hai, aur agar right table me match nahi hai toh ``NULL`` aayega.
             * Example: Customer ka record aayega chahe usne payment kiya ho ya nahi.
             * Matlab = All from Left + matching from Right.
+            * **SYNTAX**
+            
+            ```bash
+            SELECT * FROM table_1_main as t1 LEFT JOIN table_2 as t2 ON t2.same_col = t1.same_col
+            ```
+
+            ```bash
+            SELECT * FROM USER AS U LEFT JOIN `PAYMENT` AS P ON P.user_id = U.user_id;
+            ```
+            * **✅ Outputs in cell:**
+
+            ```
+            +---------+--------------+-----------------+--------------------------+------------+---------+--------------+--------+------------+
+            | user_id | name         | order_type      | user_email               | payment_id | user_id | payment_type | amount | pay_date   |
+            +---------+--------------+-----------------+--------------------------+------------+---------+--------------+--------+------------+
+            | 103     | Vishal Yadav | Electronics     | vishal.yadav@example.com | 201        | 103     | Card         | 2500   | 2025-08-20 |
+            | 512     | Ankit Sharma | Clothing        | ankit.sharma@example.com | 452        | 512     | UPI          | 1200   | 2025-08-21 |
+            | 845     | Neha Singh   | Grocery         | neha.singh@example.com   | 789        | 845     | NetBanking   | 3400   | 2025-08-22 |
+            | 276     | Rahul Mehta  | Furniture       | rahul.mehta@example.com  | <null>     | <null>  | <null>       | <null> | <null>     |
+            | 659     | Priya Verma  | Books           | priya.verma@example.com  | <null>     | <null>  | <null>       | <null> | <null>     |
+            | 901     | Aman Gupta   | Toys            | aman.gupta@example.com   | <null>     | <null>  | <null>       | <null> | <null>     |
+            | 437     | Simran Kaur  | Beauty Products | simran.kaur@example.com  | <null>     | <null>  | <null>       | <null> | <null>     |
+            +---------+--------------+-----------------+--------------------------+------------+---------+--------------+--------+------------+
+            ```
+
 
         * **3️⃣ RIGHT JOIN**
             * ![RIGHT](./assets/right.png)
