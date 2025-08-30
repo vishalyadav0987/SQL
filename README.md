@@ -1250,6 +1250,30 @@ SELECT DAYOFYEAR(addmission_date) AS admission_doy FROM students;
             * Right table ke saare records dikhata hai, aur agar left table me match nahi hai toh ``NULL`` aayega.
             * Example: Payment ka record aayega chahe customer table me entry ho ya nahi.
             * Matlab = All from Right + matching from Left.
+            * **SYNTAX**
+            
+            ```bash
+            SELECT * FROM table_1_main as t1 RIGHT JOIN table_2 as t2 ON t2.same_col = t1.same_col
+            ```
+
+            ```bash
+            SELECT * FROM USER AS U RIGHT JOIN `PAYMENT` AS P ON P.user_id = U.user_id;
+            ```
+            * **✅ Outputs in cell:**
+
+            ```
+            +---------+--------------+-------------+--------------------------+------------+---------+--------------+--------+------------+
+            | user_id | name         | order_type  | user_email               | payment_id | user_id | payment_type | amount | pay_date   |
+            +---------+--------------+-------------+--------------------------+------------+---------+--------------+--------+------------+
+            | 103     | Vishal Yadav | Electronics | vishal.yadav@example.com | 201        | 103     | Card         | 2500   | 2025-08-20 |
+            | 512     | Ankit Sharma | Clothing    | ankit.sharma@example.com | 452        | 512     | UPI          | 1200   | 2025-08-21 |
+            | 845     | Neha Singh   | Grocery     | neha.singh@example.com   | 789        | 845     | NetBanking   | 3400   | 2025-08-22 |
+            | <null>  | <null>       | <null>      | <null>                   | 634        | 999     | Cash         | 500    | 2025-08-23 |
+            | <null>  | <null>       | <null>      | <null>                   | 918        | 888     | Wallet       | 800    | 2025-08-24 |
+            | <null>  | <null>       | <null>      | <null>                   | 372        | 777     | Card         | 1500   | 2025-08-25 |
+            | <null>  | <null>       | <null>      | <null>                   | 557        | 555     | UPI          | 2200   | 2025-08-26 |
+            +---------+--------------+-------------+--------------------------+------------+---------+--------------+--------+------------
+            ```
             
 
         * **4️⃣ FULL OUTER JOIN**
