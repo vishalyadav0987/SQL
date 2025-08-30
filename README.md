@@ -917,11 +917,11 @@ SELECT grades, SUM(marks) AS Total FROM students GROUP BY grades HAVING SUM(mark
     * **TIMESTAMPTZ** contains date, time, and time zone.
 
 - ``**Functions**``
-    * **SHOW TIMEZONE** postgras ✅ , MySQL ❌
-    * **SELECT NOW()** postgras ✅ , MySQL ✅ 
-    * **SELECT TIMEOFDAY()** postgras ✅ , MySQL ❌
-    * **SELECT CURRENT_TIME** postgras ✅ , MySQL ✅
-    * **SELECT CURRENT_DATE** postgras ✅ , MySQL ✅
+    * **SHOW TIMEZONE** postgre ✅ , MySQL ❌
+    * **SELECT NOW()** postgre ✅ , MySQL ✅ 
+    * **SELECT TIMEOFDAY()** postgre ✅ , MySQL ❌
+    * **SELECT CURRENT_TIME** postgre ✅ , MySQL ✅
+    * **SELECT CURRENT_DATE** postgre ✅ , MySQL ✅
 
 
 ---
@@ -1007,4 +1007,162 @@ SELECT NOW() AS FullDateTime, CURDATE() AS OnlyDate, CURTIME() AS OnlyTime;
 
 ---
                     
+- **15.B EXTRACT Functions:**
+    * The ``EXTRACT()`` function extracts a part from a given date value.
+- ``**Functions**``
+    * **YEAR**
+    * **QUARTER** X
+    * **MONTH**
+    * **WEEK**
+    * **HOUR**
+    * **DAY** - date
+    * **MINUTE**
+    * **DOW** - day of week [postgre ✅ , MySQL ❌]
+    * **DOY** - day of year [postgre ✅ , MySQL ❌]
+    * **DAYOFYEAR** [postgre ❌, MySQL ✅]
+    * **DAYOFWEEK** [postgre ❌, MySQL ✅]
 
+---
+- **✅ Outputs in cell:**
+```bash
+SELECT EXTRACT(YEAR FROM addmission_date) AS addmission_year FROM students;
+```
+```
++-----------------+
+| addmission_year |
++-----------------+
+| 2022            |
+| 2022            |
+| 2022            |
+| 2022            |
+| 2022            |
+| 2022            |
+| 2022            |
+| 2022            |
+| 2022            |
++-----------------+
+```
+
+---
+
+```bash
+ELECT EXTRACT(QUARTER FROM addmission_date) AS addmission_quater FROM students;
+```
+```
++-------------------+
+| addmission_quater |
++-------------------+
+| 3                 |
+| 2                 |
+| 2                 |
+| 3                 |
+| 2                 |
+| 3                 |
+| 2                 |
+| 2                 |
+| 2                 |
++-------------------+
+```
+
+---
+
+```bash
+SELECT EXTRACT(MONTH FROM addmission_date) AS addmission_month FROM students;
+```
+```
++------------------+
+| addmission_month |
++------------------+
+| 8                |
+| 6                |
+| 4                |
+| 8                |
+| 6                |
+| 8                |
+| 6                |
+| 4                |
+| 6                |
++------------------+
+```
+---
+
+```bash
+SELECT EXTRACT(WEEK FROM addmission_date) AS addmission_week FROM students;
+```
+```
++-----------------+
+| addmission_week |
++-----------------+
+| 32              |
+| 24              |
+| 16              |
+| 32              |
+| 24              |
+| 32              |
+| 24              |
+| 16              |
+| 24              |
++-----------------+
+```
+
+---
+```bash
+SELECT EXTRACT(DAY FROM addmission_date) AS addmission_day FROM students;
+```
+```
++----------------+
+| addmission_day |
++----------------+
+| 10             |
+| 16             |
+| 21             |
+| 10             |
+| 16             |
+| 10             |
+| 16             |
+| 21             |
+| 16             |
++----------------+
+```
+
+---
+```bash
+SELECT DAYOFWEEK(addmission_date) AS admission_dow FROM students;
+```
+```
++---------------+
+| admission_dow |
++---------------+
+| 4 (Thrusday)  |
+| 5 (Friday)    |
+| 5             |
+| 4             |
+| 5             |
+| 4             |
+| 5             |
+| 5             |
+| 5             |
++---------------+
+```
+
+---
+```bash
+SELECT DAYOFYEAR(addmission_date) AS admission_doy FROM students;
+```
+```
++---------------+
+| admission_doy |
++---------------+
+| 222 [konse]   |
+| 167 [number]  |
+| 111 [ka]      |
+| 222 [din hai] |
+| 167           |
+| 222           |
+| 167           |
+| 111           |
+| 167           |
++---------------+
+```
+
+---
