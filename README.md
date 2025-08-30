@@ -1276,11 +1276,40 @@ SELECT DAYOFYEAR(addmission_date) AS admission_doy FROM students;
             ```
             
 
-        * **4️⃣ FULL OUTER JOIN**
+        * **4️⃣ FULL OUTER JOIN** [postgre ✅ , MySQL ❌]
             * ![FULL](./assets/full.png)
             * Dono tables ke saare records dikhata hai, chahe match ho ya na ho.
             * Jo match nahi hote unke saamne NULL aa jata hai.
             * Matlab = All from Left + All from Right.
+            * **SYNTAX**
+            
+            ```bash
+            SELECT * FROM table_1_main as t1 FULL OUTER JOIN table_2 as t2 ON t2.same_col = t1.same_col
+            ```
+
+            ```bash
+            SELECT * FROM USER AS U FULL OUTER JOIN `PAYMENT` AS P ON P.user_id = U.user_id;
+            ```
+            * **✅ Outputs in cell:**
+
+            ```
+            | user_id | name         | order_type     | user_email                                                 | payment_id | payment_type | amount | pay_date  |
+            | -------- | ------------ | --------------- | ----------------------------------------------------------- | ----------- | ------------- | ------ | ---------- |
+            | 103      | Vishal Yadav | Electronics     | [vishal.yadav@example.com](mailto:vishal.yadav@example.com) | 201         | Card          | 2500   | 2025-08-20 |
+            | 512      | Ankit Sharma | Clothing        | [ankit.sharma@example.com](mailto:ankit.sharma@example.com) | 452         | UPI           | 1200   | 2025-08-21 |
+            | 845      | Neha Singh   | Grocery         | [neha.singh@example.com](mailto:neha.singh@example.com)     | 789         | NetBanking    | 3400   | 2025-08-22 |
+            | 276      | Rahul Mehta  | Furniture       | [rahul.mehta@example.com](mailto:rahul.mehta@example.com)   | NULL        | NULL          | NULL   | NULL       |
+            | 659      | Priya Verma  | Books           | [priya.verma@example.com](mailto:priya.verma@example.com)   | NULL        | NULL          | NULL   | NULL       |
+            | 901      | Aman Gupta   | Toys            | [aman.gupta@example.com](mailto:aman.gupta@example.com)     | NULL        | NULL          | NULL   | NULL       |
+            | 437      | Simran Kaur  | Beauty Products | [simran.kaur@example.com](mailto:simran.kaur@example.com)   | NULL        | NULL          | NULL   | NULL       |
+            | NULL     | NULL         | NULL            | NULL                                                        | 634         | Cash          | 500    | 2025-08-23 |
+            | NULL     | NULL         | NULL            | NULL                                                        | 918         | Wallet        | 800    | 2025-08-24 |
+            | NULL     | NULL         | NULL            | NULL                                                        | 372         | Card          | 1500   | 2025-08-25 |
+            | NULL     | NULL         | NULL            | NULL                                                        | 557         | UPI           | 2200   | 2025-08-26 |
+
+            ```
+            
+
         
         * **Explaination:**
             * ``INNER JOIN`` → Common only
