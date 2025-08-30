@@ -1193,13 +1193,16 @@ SELECT DAYOFYEAR(addmission_date) AS admission_doy FROM students;
             * Example: Agar customer aur payment table me ``customer_id`` match karega tabhi record aayega.
             * Matlab = Common data only.
             * **SYNTAX**
+            
             ```bash
             SELECT * FROM table_1_main as t1 INNER JOIN table_2 as t2 ON t2.same_col = t1.same_col
             ```
+
             ```bash
             SELECT * FROM USER AS U INNER JOIN `PAYMENT` AS P ON U.user_id = P.user_id;
             ```
             * **✅ Outputs in cell:**
+
             ```
             +---------+--------------+-------------+--------------------------+------------+---------+--------------+--------+------------+
             | user_id | name         | order_type  | user_email               | payment_id | user_id | payment_type | amount | pay_date   |
