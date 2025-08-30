@@ -1293,19 +1293,22 @@ SELECT DAYOFYEAR(addmission_date) AS admission_doy FROM students;
             * **✅ Outputs in cell:**
 
             ```
-            | user_id | name         | order_type     | user_email                                                 | payment_id | payment_type | amount | pay_date  |
-            | -------- | ------------ | --------------- | ----------------------------------------------------------- | ----------- | ------------- | ------ | ---------- |
-            | 103      | Vishal Yadav | Electronics     | [vishal.yadav@example.com](mailto:vishal.yadav@example.com) | 201         | Card          | 2500   | 2025-08-20 |
-            | 512      | Ankit Sharma | Clothing        | [ankit.sharma@example.com](mailto:ankit.sharma@example.com) | 452         | UPI           | 1200   | 2025-08-21 |
-            | 845      | Neha Singh   | Grocery         | [neha.singh@example.com](mailto:neha.singh@example.com)     | 789         | NetBanking    | 3400   | 2025-08-22 |
-            | 276      | Rahul Mehta  | Furniture       | [rahul.mehta@example.com](mailto:rahul.mehta@example.com)   | NULL        | NULL          | NULL   | NULL       |
-            | 659      | Priya Verma  | Books           | [priya.verma@example.com](mailto:priya.verma@example.com)   | NULL        | NULL          | NULL   | NULL       |
-            | 901      | Aman Gupta   | Toys            | [aman.gupta@example.com](mailto:aman.gupta@example.com)     | NULL        | NULL          | NULL   | NULL       |
-            | 437      | Simran Kaur  | Beauty Products | [simran.kaur@example.com](mailto:simran.kaur@example.com)   | NULL        | NULL          | NULL   | NULL       |
-            | NULL     | NULL         | NULL            | NULL                                                        | 634         | Cash          | 500    | 2025-08-23 |
-            | NULL     | NULL         | NULL            | NULL                                                        | 918         | Wallet        | 800    | 2025-08-24 |
-            | NULL     | NULL         | NULL            | NULL                                                        | 372         | Card          | 1500   | 2025-08-25 |
-            | NULL     | NULL         | NULL            | NULL                                                        | 557         | UPI           | 2200   | 2025-08-26 |
+            +---------+--------------+-----------------+--------------------------+------------+--------------+--------+------------+
+            | user_id | name         | order_type      | user_email               | payment_id | payment_type | amount | pay_date   |
+            +---------+--------------+-----------------+--------------------------+------------+--------------+--------+------------+
+            | 103     | Vishal Yadav | Electronics     | vishal.yadav@example.com | 201        | Card         | 2500   | 2025-08-20 |
+            | 512     | Ankit Sharma | Clothing        | ankit.sharma@example.com | 452        | UPI          | 1200   | 2025-08-21 |
+            | 845     | Neha Singh   | Grocery         | neha.singh@example.com   | 789        | NetBanking   | 3400   | 2025-08-22 |
+            | 276     | Rahul Mehta  | Furniture       | rahul.mehta@example.com  | NULL       | NULL         | NULL   | NULL       |
+            | 659     | Priya Verma  | Books           | priya.verma@example.com  | NULL       | NULL         | NULL   | NULL       |
+            | 901     | Aman Gupta   | Toys            | aman.gupta@example.com   | NULL       | NULL         | NULL   | NULL       |
+            | 437     | Simran Kaur  | Beauty Products | simran.kaur@example.com  | NULL       | NULL         | NULL   | NULL       |
+            | NULL    | NULL         | NULL            | NULL                     | 634        | Cash         | 500    | 2025-08-23 |
+            | NULL    | NULL         | NULL            | NULL                     | 918        | Wallet       | 800    | 2025-08-24 |
+            | NULL    | NULL         | NULL            | NULL                     | 372        | Card         | 1500   | 2025-08-25 |
+            | NULL    | NULL         | NULL            | NULL                     | 557        | UPI          | 2200   | 2025-08-26 |
+            +---------+--------------+-----------------+--------------------------+------------+--------------+--------+------------+
+
 
             ```
             
