@@ -855,3 +855,53 @@ SELECT MIN(marks) AS HighestMark FROM students;
 ```
 
 ---
+
+### 14. GROUP BY & HAVING cluase (Main):
+- **14.A GROUP BY statement:**
+    * The ``GROUP BY`` statement group rows that have the same values into summary rows.
+    * It is often used with aggregate function (COUNT(),MIN(),MAX(),SUM(),AVG()) to group the result-set by one or more columns.
+```bash
+SELECT <group_cols_name>, SUM(marks) AS Total FROM students GROUP BY <group_cols_name>
+```
+- **✅ Outputs in cell:**
+```
++--------+-------+
+| grades | Total |
++--------+-------+
+| E      | 99    |
+| B      | 320   |
+| A      | 180   |
++--------+-------+
+```
+
+- **Note:**`` ORDER BY statement always use in the end of SQL query.``
+    * **Example:**
+    ```bash
+    SELECT grades, SUM(marks) AS Total FROM students GROUP BY grades ORDER BY total DESC;
+    ```
+    ```bash
+    SELECT * FROM students ORDER BY marks DESC;
+    ```
+
+---
+
+- **14.B HAVING Clause:**
+    * The ``HAVING Clause`` is used to apply a filter on the result of ``GROUP BY`` based on the specified condition.
+    * The ``WHERE Clause`` places conditions on the selected columns, whereas the ``HAVING Clause`` places conditions on groups created by the ``GROUP BY`` clause.
+    * ``WHERE`` clause use hota hai rows ko filter karne ke liye ``before grouping``, jabki ``HAVING`` clause use hota hai groups ko filter karne ke liye aur yeh ``hamesha GROUP BY ke baad aata hai``.
+
+```bash
+SELECT grades, SUM(marks) AS Total FROM students GROUP BY grades HAVING SUM(marks) >= 100 ORDER BY Total DESC;
+```
+- **✅ Outputs in cell:**
+```
++--------+-------+
+| grades | Total |
++--------+-------+
+| B      | 320   |
+| A      | 180   |
++--------+-------+
+```
+- **Note:**`` HAVING clause mean humene jo bhi total kiya woh total 100 se upper ho aur filter hoker mile.``
+
+---
