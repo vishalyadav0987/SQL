@@ -1202,13 +1202,14 @@ SELECT DAYOFYEAR(addmission_date) AS admission_doy FROM students;
             * **✅ Outputs in cell:**
             ```
             +---------+--------------+-------------+--------------------------+------------+---------+--------------+--------+------------+
-| user_id | name         | order_type  | user_email               | payment_id | user_id | payment_type | amount | pay_date   |
-+---------+--------------+-------------+--------------------------+------------+---------+--------------+--------+------------+
-| 103     | Vishal Yadav | Electronics | vishal.yadav@example.com | 201        | 103     | Card         | 2500   | 2025-08-20 |
-| 512     | Ankit Sharma | Clothing    | ankit.sharma@example.com | 452        | 512     | UPI          | 1200   | 2025-08-21 |
-| 845     | Neha Singh   | Grocery     | neha.singh@example.com   | 789        | 845     | NetBanking   | 3400   | 2025-08-22 |
-+---------+--------------+-------------+--------------------------+------------+---------+--------------+--------+------------+
+            | user_id | name         | order_type  | user_email               | payment_id | user_id | payment_type | amount | pay_date   |
+            +---------+--------------+-------------+--------------------------+------------+---------+--------------+--------+------------+
+            | 103     | Vishal Yadav | Electronics | vishal.yadav@example.com | 201        | 103     | Card         | 2500   | 2025-08-20 |
+            | 512     | Ankit Sharma | Clothing    | ankit.sharma@example.com | 452        | 512     | UPI          | 1200   | 2025-08-21 |
+            | 845     | Neha Singh   | Grocery     | neha.singh@example.com   | 789        | 845     | NetBanking   | 3400   | 2025-08-22 |
+            +---------+--------------+-------------+--------------------------+------------+---------+--------------+--------+------------+
             ```
+
 
         * **2️⃣ LEFT JOIN**
             * ![LEFT](./assets/left.png)
