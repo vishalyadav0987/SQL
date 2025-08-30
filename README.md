@@ -905,3 +905,106 @@ SELECT grades, SUM(marks) AS Total FROM students GROUP BY grades HAVING SUM(mark
 - **Note:**`` HAVING clause mean humene jo bhi total kiya woh total 100 se upper ho aur filter hoker mile.``
 
 ---
+
+
+### 15. Timestamp & Extract:
+- **15.A TIMESTAMP:**
+    *  The ``TIMESTAMP`` datatype is used for values that contain both date and time parts.
+    *  **TIME** contains only time, format ``HH:MI:SS``.
+    * **DATE** contains on date, format ``YYYY-MM-DD``.
+    * **YEAR** conatins on year, format ``YYYY`` or ``YY``.
+    * **TIMESTAMP** contains date and time, format ``YYYY-MM-DD HH:MI:SS``.
+    * **TIMESTAMPTZ** contains date, time, and time zone.
+
+- ``**Functions**``
+    * **SHOW TIMEZONE** postgras ✅ , MySQL ❌
+    * **SELECT NOW()** postgras ✅ , MySQL ✅ 
+    * **SELECT TIMEOFDAY()** postgras ✅ , MySQL ❌
+    * **SELECT CURRENT_TIME** postgras ✅ , MySQL ✅
+    * **SELECT CURRENT_DATE** postgras ✅ , MySQL ✅
+
+
+---
+### 📌 PostgreSQL vs MySQL Date & Time Functions
+
+| Purpose             | PostgreSQL Function           | MySQL Function                  | Example Output (29 Aug 2025, 10:20:45) |
+| ------------------- | ----------------------------- | ------------------------------- | -------------------------------------- |
+| Current date + time | `NOW()` / `CURRENT_TIMESTAMP` | `NOW()` / `CURRENT_TIMESTAMP()` | `2025-08-29 10:20:45`                  |
+| Current date        | `CURRENT_DATE`                | `CURDATE()`                     | `2025-08-29`                           |
+| Current time        | `CURRENT_TIME`                | `CURTIME()`                     | `10:20:45`                             |
+| Date + time with TZ | `TIMEOFDAY`                   | ❌ Not available (use `NOW()`)   | `Fri Aug 29 10:20:45.123456 IST 2025`  |
+| Only year           | `EXTRACT(YEAR FROM NOW())`    | `YEAR(NOW())`                   | `2025`                                 |
+| Only month          | `EXTRACT(MONTH FROM NOW())`   | `MONTH(NOW())`                  | `8`                                    |
+| Only day            | `EXTRACT(DAY FROM NOW())`     | `DAY(NOW())`                    | `29`                                   |
+| Only hour           | `EXTRACT(HOUR FROM NOW())`    | `HOUR(NOW())`                   | `10`                                   |
+| Only minute         | `EXTRACT(MINUTE FROM NOW())`  | `MINUTE(NOW())`                 | `20`                                   |
+| Only second         | `EXTRACT(SECOND FROM NOW())`  | `SECOND(NOW())`                 | `45`                                   |
+| UTC date & time     | `NOW() AT TIME ZONE 'UTC'`    | `UTC_TIMESTAMP()`               | `2025-08-29 04:50:45`                  |
+
+---
+
+
+- **✅ Outputs in cell:**
+```bash
+SELECT NOW() AS CurrentDateTime;
+```
+```
++---------------------+
+| CurrentDateTime     |
++---------------------+
+| 2025-08-30 10:44:31 |
++---------------------+
+```
+---
+
+```bash
+SELECT CURTIME()
+```
+```
++--------------+
+| CURRENT_TIME |
++--------------+
+| 10:46:31     |
++--------------+
+```
+---
+
+```bash
+SELECT CURDATE();
+```
+```
++--------------+
+| CURRENT_DATE |
++--------------+
+| 2025-08-30   |
++--------------+
+```
+
+---
+
+```bash
+SELECT UTC_TIMESTAMP();
+```
+```
++---------------------+
+| UTC_TIMESTAMP()     |
++---------------------+
+| 2025-08-30 05:17:26 |
++---------------------+
+```
+
+---
+```bash
+SELECT NOW() AS FullDateTime, CURDATE() AS OnlyDate, CURTIME() AS OnlyTime;
+```
+```
++---------------------+------------+----------+
+| FullDateTime        | OnlyDate   | OnlyTime |
++---------------------+------------+----------+
+| 2025-08-30 10:47:34 | 2025-08-30 | 10:47:34 |
++---------------------+------------+----------+
+```
+
+---
+                    
+
