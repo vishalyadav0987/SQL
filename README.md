@@ -1361,3 +1361,60 @@ SELECT T1.name , T2.name AS manager_name FROM `employeeMangaer` AS T1 JOIN `empl
 -  **Note:** ``Above both example is same. Joining two same table with dedicated managerId.``
 
 ---
+
+### 18. SQL UNION (Main):
+- **The SQL ``UNION`` clause/operator is used to combine/concatenate the results of two or more SELECT statement without returning any duplicate rows and keep ``UNIQUE RECORDS``.**
+- **To use this ``UNION`` clause, each SELECT statement must have:**
+    * The same number of columns selected any expressions.
+    * The same datatype.
+    * Have them same in the order.
+
+```
+Table 1
+```
+```
++----+----------------+-------+
+| id | name           | price |
++----+----------------+-------+
+| 1  | Sonalika       | 200   |
+| 2  | Jashmin        | 400   |
+| 3  | Rubina deliake | 350   |
+| 4  | Rashmi desai   | 200   |
+| 1  | Alxy Star      | 4000  |
+| 2  | Mia            | 2000  |
++----+----------------+-------+
+```
+
+```
+Table 2
+```
+```
++----+-------------+-------+
+| id | name        | price |
++----+-------------+-------+
+| 1  | Alxy Star   | 4000  |
+| 2  | Mia         | 2000  |
+| 3  | deni deinal | 5000  |
++----+-------------+-------+
+```
+
+---
+
+```bash
+SELECT * FROM Table1 UNION SELECT * FROM Table2;
+```
+- **✅ After ``UNION`` Outputs in cell:**
+```
+| id | name           | price |
++----+----------------+-------+
+| 1  | Sonalika       | 200   |
+| 2  | Jashmin        | 400   |
+| 3  | Rubina deliake | 350   |
+| 4  | Rashmi desai   | 200   |
+| 1  | Alxy Star      | 4000  |
+| 2  | Mia            | 2000  |
+| 3  | deni deinal    | 5000  |
++----+----------------+-------+
+```
+
+---
