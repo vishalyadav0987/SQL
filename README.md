@@ -1405,12 +1405,38 @@ SELECT * FROM Table1 UNION SELECT * FROM Table2;
 ```
 - **✅ After ``UNION`` Outputs in cell:**
 ```
++----+----------------+-------+
 | id | name           | price |
 +----+----------------+-------+
 | 1  | Sonalika       | 200   |
 | 2  | Jashmin        | 400   |
 | 3  | Rubina deliake | 350   |
 | 4  | Rashmi desai   | 200   |
+| 1  | Alxy Star      | 4000  |
+| 2  | Mia            | 2000  |
+| 3  | deni deinal    | 5000  |
++----+----------------+-------+
+```
+
+---
+
+### 18. SQL UNION ALL (Main):
+- **Sabhi data join hota means ishme duplicates rows se farak nh padata hai. ye sabhi ko join kar deta hai.**
+
+```bash
+SELECT * FROM Table1 UNION ALL SELECT * FROM Table2;
+```
+- **✅ After ``UNION ALL`` Outputs in cell:**
+```
++----+----------------+-------+
+| id | name           | price |
++----+----------------+-------+
+| 1  | Sonalika       | 200   |
+| 2  | Jashmin        | 400   |
+| 3  | Rubina deliake | 350   |
+| 4  | Rashmi desai   | 200   |
+| 1  | Alxy Star      | 4000  |
+| 2  | Mia            | 2000  |
 | 1  | Alxy Star      | 4000  |
 | 2  | Mia            | 2000  |
 | 3  | deni deinal    | 5000  |
