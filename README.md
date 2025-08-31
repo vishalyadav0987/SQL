@@ -1320,3 +1320,44 @@ SELECT DAYOFYEAR(addmission_date) AS admission_doy FROM students;
             * ``RIGHT JOIN`` → Right + Common
             * ``FULL OUTER JOIN`` → Left + Right + Common
 
+
+---
+
+### 17. SELF JOIN (Main):
+- **A ``SELF JOIN`` is a regular join in which a table is joined to itself.**
+- **``SELF JOIN`` are powerful for comparing values in a column of rows with the same table.**
+```bash
+SELECT * FROM `employeeMangaer` AS T1 JOIN `employeeMangaer` AS T2 ON T1.empId = T2.`managerId`;
+```
+
+- **✅ Outputs in cell:**
+```
++-------+------+-----------+-------+------+-----------+
+| empId | name | managerId | empId | name | managerId |
++-------+------+-----------+-------+------+-----------+
+| 3     | yyy  | 1         | 1     | xxx  | 3         |
+| 1     | xxx  | 3         | 2     | zzz  | 1         |
+| 1     | xxx  | 3         | 3     | yyy  | 1         |
+| 2     | zzz  | 1         | 4     | www  | 2         |
++-------+------+-----------+-------+------+-----------+
+```
+
+---
+```bash
+SELECT T1.name , T2.name AS manager_name FROM `employeeMangaer` AS T1 JOIN `employeeMangaer` AS T2 ON T1.empId = T2.`managerId`;
+```
+- **✅ Outputs in cell:**
+```
++------+--------------+
+| name | manager_name |
++------+--------------+
+| yyy  | xxx          |
+| xxx  | zzz          |
+| xxx  | yyy          |
+| zzz  | www          |
++------+--------------+
+```
+
+-  **Note:** ``Above both example is same. Joining two same table with dedicated managerId.``
+
+---
