@@ -1420,7 +1420,7 @@ SELECT * FROM Table1 UNION SELECT * FROM Table2;
 
 ---
 
-### 18. SQL UNION ALL (Main):
+### 19. SQL UNION ALL (Main):
 - **Sabhi data join hota means ishme duplicates rows se farak nh padata hai. ye sabhi ko join kar deta hai.**
 
 ```bash
@@ -1441,6 +1441,81 @@ SELECT * FROM Table1 UNION ALL SELECT * FROM Table2;
 | 2  | Mia            | 2000  |
 | 3  | deni deinal    | 5000  |
 +----+----------------+-------+
+```
+
+---
+
+
+### 20. SUB Queries or Nested Queries (Main):
+- **A ``Subquery`` or ``Inner`` query or a ``Nested`` query allow us to create complex query on the output of another query.**
+- **Subquery invloves ``two SELECT`` statement.**
+
+- **``CASE 1:`` When Query Return one value as output.**
+```
+Query 1
+```
+```bash
+SELECT AVG(marks) as avgMark FROM students;
+```
+```
+Query 2
+```
+```bash
+SELECT name,marks,grades FROM students;
+```
+
+- **✅ We Wants output as whose student marks is greater then avg in cell:**
+```
+NESTED QUERY
+```
+```bash
+SELECT name,marks,grades FROM students WHERE marks > (SELECT AVG(marks) as avgMark FROM students);
+```
+```
++---------------+-------+--------+
+| name          | marks | grades |
++---------------+-------+--------+
+| Bob Smith     | 80    | B      |
+| Charlie Brown | 90    | A      |
+| Ethan Hunt    | 80    | B      |
+| Hannah Lee    | 80    | B      |
+| Ian Clark     | 90    | A      |
+| Julia Adams   | 80    | B      |
++---------------+-------+--------+
+```
+
+---
+
+
+- **``CASE 2:`` When Query Return more than one value as output.**
+```
+Query 1
+```
+```bash
+SELECT user_id,amount , payment_type from `PAYMENT`
+```
+```
+Query 2
+```
+```bash
+SELECT user_id FROM USER
+```
+
+- **✅ We Wants output as whose user made payment is which type:**
+```
+NESTED QUERY
+```
+```bash
+SELECT user_id,amount , payment_type from `PAYMENT` where u IN (SELECT user_id FROM USER);
+```
+```
++---------+--------+--------------+
+| user_id | amount | payment_type |
++---------+--------+--------------+
+| 103     | 2500   | Card         |
+| 512     | 1200   | UPI          |
+| 845     | 3400   | NetBanking   |
++---------+--------+--------------+
 ```
 
 ---
